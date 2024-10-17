@@ -1,6 +1,6 @@
 package com.codegym;
 
-public class Circle extends Shape {
+public class Circle extends Shape implements Resizable {
     private double radius = 1.0;
 
     public Circle() {
@@ -33,9 +33,14 @@ public class Circle extends Shape {
 
     @Override
     public String toString() {
-        return "A Circle with radius="
+        return "A Circle with radius = "
                 + getRadius()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        this.setRadius(this.radius * percent / 100);
     }
 }
