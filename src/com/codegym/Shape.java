@@ -1,6 +1,6 @@
 package com.codegym;
 
-public class Shape {
+public abstract class Shape implements Resizable {
     private String color = "green";
     private boolean filled = true;
 
